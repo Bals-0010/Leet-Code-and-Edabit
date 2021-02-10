@@ -32,11 +32,13 @@ If you return "X" or "O", make sure they're capitalised too.
 # Hard coded way or way without using Numpy array functions
 def tic_tac_toe(array):
     conditions_X = [(array[0][0]==array[1][1]==array[2][2]=="X"),
+                    (array[0][2]==array[1][1]==array[2][0]=="X"),
                     (array[0][0]==array[1][0]==array[2][0]=="X"),
                     (array[0][1]==array[1][1]==array[2][1]=="X"),
                     (array[0][2]==array[1][2]==array[2][2]=="X")]
     
     conditions_O = [(array[0][0]==array[1][1]==array[2][2]=="O"),
+                    (array[0][2]==array[1][1]==array[2][0]=="O"),
                     (array[0][0]==array[1][0]==array[2][0]=="O"),
                     (array[0][1]==array[1][1]==array[2][1]=="O"),
                     (array[0][2]==array[1][2]==array[2][2]=="O")]
@@ -54,5 +56,5 @@ def tic_tac_toe(array):
         return "Only 3x3 matrix is allowed !"
 
 print(tic_tac_toe([ ['X', 'O', 'X'], \
-                    ['O', 'O', 'O'], \
-                    ['O', 'X', 'X']]))
+                    ['O', 'X', 'O'], \
+                    ['O', 'X', 'O']]))
