@@ -16,16 +16,22 @@
     giancarlo.nationality ➞ "Italian"
     
     Notes:
-    First and last names will be separated by a whitespace. The test will not include any middle names or initials.
+    First and last names will be separated by a whitespace. 
+    The test will not include any middle names or initials.
     The value of the keywords can be an int, a str or a list.
 """
 
 
-class Employee:
+class Employee:    
     def __init__(self, name, **kwargs):
         self.name = name.split(' ')
-        self.firstname = self.name[0]
-        self.lastname = self.name[1]
+        if len(self.name)>=2:
+            self.firstname = self.name[0]
+            self.lastname = self.name[1]
+        else:
+            raise "Middle names not allowed !"
+        
+            
         # self.__dict__.update(kwargs) #Pythonic way to update attributes with **kwargs
         
         # Conventional way to set attributes based on kwargs
