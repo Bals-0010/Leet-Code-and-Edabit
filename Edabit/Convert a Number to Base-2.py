@@ -42,7 +42,7 @@ def binary(decimal):
                 continue
         container = container[::-1]
         return ''.join(str(i) for i in container)
-print(binary(40))
+print(binary(50))
 
 
 """
@@ -50,11 +50,8 @@ Extra notes:
 
 Trying to achieve by old school 
     ___
- 2 | 50 - 
- 2 | 25 - 0
- 2 | 12 - 1
- 2 | 6  - 0
- 2 | 3  - 0
+ 2 | 10 - 
+ 2 | 5  - 0
+ 2 | 2  - 1
  2 | 1  - 0
-     
 """
