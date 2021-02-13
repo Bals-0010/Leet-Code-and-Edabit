@@ -23,7 +23,7 @@ def tp_checker(people_tp_dict):
     if tp_solution<14:
         return "Your TP will only last " + str(tp_solution) + " days, buy more!"
     else:
-        return "Your TP will last " + str(tp_solution) + " days, no need to buy panic!"
+        return "Your TP will last " + str(tp_solution) + " days, no need to panic!"
 
 print(tp_checker({"people":4, "tp":1}))
      
